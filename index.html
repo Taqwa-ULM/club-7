@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CCM Math Master - Trik Kilat CNE Kelas 7</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              900: '#1e1b4b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .math-pill {
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(168, 85, 247, 0.08) 100%);
+      border: 1px dashed rgba(99, 102, 241, 0.3);
+    }
+    .glow-effect {
+      box-shadow: 0 0 25px -5px rgba(79, 70, 229, 0.25);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col font-sans selection:bg-indigo-100 selection:text-indigo-800">
+
+  <!-- TOP NAVBAR -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-600 text-white flex items-center justify-center font-black text-xl shadow-md shadow-indigo-200">
+          ⚡
+        </div>
+        <div>
+          <span class="font-extrabold text-lg text-slate-900 tracking-tight flex items-center gap-1.5">
+            CCM Math Hack <span class="bg-indigo-100 text-indigo-700 text-xs px-2 py-0.5 rounded-full font-bold">Kelas 7 CNE</span>
+          </span>
+          <p class="text-xs text-slate-500 hidden sm:block">Enrichment & Trik Kilat Cerdas Cermat Matematika</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <button onclick="switchTab('materi')" id="btn-nav-materi" class="px-4 py-2 rounded-lg text-sm font-semibold transition bg-indigo-50 text-indigo-700 border border-indigo-200">
+          <i class="fa-solid fa-book-open mr-1.5"></i> Materi & Tips Cepat
+        </button>
+        <button onclick="switchTab('challenge')" id="btn-nav-challenge" class="px-4 py-2 rounded-lg text-sm font-semibold transition bg-slate-100 hover:bg-indigo-600 hover:text-white text-slate-600">
+          <i class="fa-solid fa-bolt mr-1.5 text-amber-500"></i> Latihan 10 Challenge
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="flex-1 max-w-6xl mx-auto w-full px-4 sm:px-6 py-8">
+
+    <!-- VIEW: MATERI & CARA CEPAT -->
+    <section id="section-materi" class="space-y-10">
+      <!-- HERO BANNER -->
+      <div class="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-indigo-800 to-slate-900 rounded-3xl p-6 sm:p-10 text-white shadow-xl">
+        <div class="relative z-10 max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur border border-white/20 text-indigo-200 text-xs font-semibold mb-4">
+            🔥 Rahasia Juara Cerdas Cermat Matematika (CCM)
+          </div>
+          <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight">
+            Kuasai <span class="text-amber-300">"Mental Math & Pola Kilat"</span> Dalam Hitungan 3 Detik!
+          </h1>
+          <p class="mt-3 text-slate-300 text-sm sm:text-base leading-relaxed">
+            Di babak rebutan CCM, kecepatan adalah raja! Jangan pakai cara cekeran panjang sekolah jika ada trik sifat aljabar & aritmetika cepat. Yuk kuasai 5 trik legendaris untuk anak kelas 7!
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#trik-list" class="bg-indigo-500 hover:bg-indigo-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-lg shadow-indigo-500/30 transition flex items-center gap-2">
+              Pelajari 5 Jurus <i class="fa-solid fa-arrow-down"></i>
+            </a>
+            <button onclick="switchTab('challenge')" class="bg-amber-400 hover:bg-amber-300 text-slate-950 px-5 py-2.5 rounded-xl font-bold text-sm shadow-lg shadow-amber-400/30 transition flex items-center gap-2">
+              <i class="fa-solid fa-fire"></i> Langsung Uji 10 Challenge (2 Tiap Sub-Bab)
+            </button>
+          </div>
+        </div>
+        <!-- Decorative bg -->
+        <div class="absolute -right-10 -bottom-10 w-72 h-72 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute right-12 top-1/2 -translate-y-1/2 opacity-10 text-9xl font-black font-mono select-none hidden lg:block">
+          ∑π√
+        </div>
+      </div>
+
+      <!-- INTERACTIVE CALCULATOR PREVIEW / LAB -->
+      <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+        <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
+          <div>
+            <h2 class="font-bold text-slate-800 text-lg flex items-center gap-2">
+              <i class="fa-solid fa-wand-magic-sparkles text-indigo-600"></i> Speed Math Live Simulator
+            </h2>
+            <p class="text-xs text-slate-500">Coba tes trik kuadrat akhiran 5 atau perkalian 11 langsung di sini!</p>
+          </div>
+          <span class="text-xs font-mono font-semibold bg-emerald-100 text-emerald-800 px-2.5 py-1 rounded-full">Interactive Sandbox</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Live Trik 1: Kuadrat Akhiran 5 -->
+          <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50">
+            <span class="text-xs font-bold uppercase tracking-wider text-indigo-600">Simulator 1</span>
+            <h3 class="font-bold text-slate-800 text-sm mt-1">Kuadrat Bilangan Berakhiran 5</h3>
+            <div class="mt-3 flex items-center gap-3">
+              <input type="number" id="sim-sq5-input" value="75" step="10" min="15" max="195" class="w-24 px-3 py-1.5 border rounded-lg font-mono font-bold text-center bg-white">
+              <span class="text-lg font-bold">² = </span>
+              <span id="sim-sq5-result" class="font-mono text-xl font-extrabold text-indigo-700">5625</span>
+            </div>
+            <p id="sim-sq5-explain" class="text-xs text-slate-500 mt-2 font-mono bg-white p-2 rounded border">
+              Langkah: (7 × 8) = 56, tempel "25" di belakang 👉 5625!
+            </p>
+          </div>
+
+          <!-- Live Trik 2: Perkalian 11 -->
+          <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50">
+            <span class="text-xs font-bold uppercase tracking-wider text-indigo-600">Simulator 2</span>
+            <h3 class="font-bold text-slate-800 text-sm mt-1">Perkalian 2 Digit × 11 (Trik Renggangkan)</h3>
+            <div class="mt-3 flex items-center gap-3">
+              <input type="number" id="sim-11-input" value="43" min="10" max="99" class="w-24 px-3 py-1.5 border rounded-lg font-mono font-bold text-center bg-white">
+              <span class="text-lg font-bold">× 11 = </span>
+              <span id="sim-11-result" class="font-mono text-xl font-extrabold text-violet-700">473</span>
+            </div>
+            <p id="sim-11-explain" class="text-xs text-slate-500 mt-2 font-mono bg-white p-2 rounded border">
+              Langkah: Renggangkan 4 & 3, sisipkan (4+3=7) di tengah 👉 473!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 MATERI & CARA CEPAT UTAMA -->
+      <div id="trik-list" class="space-y-6">
+        <div class="flex items-center justify-between">
+          <h2 class="text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
+            📚 5 Trik Emas Cerdas Cermat Kelas 7
+          </h2>
+          <span class="text-xs font-medium text-slate-500">Bahan ajar CNE</span>
+        </div>
+
+        <!-- TRIK 1 -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 transition hover:border-indigo-300">
+          <div class="flex items-start justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-indigo-600 text-white font-bold flex items-center justify-center text-sm shadow">
+                #1
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-slate-900">Kuadrat Cepat Bilangan Berakhiran 5</h3>
+                <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-0.5 rounded font-semibold">Aljabar: (10a + 5)² = 100a(a+1) + 25</span>
+              </div>
+            </div>
+            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full flex items-center gap-1">
+              <i class="fa-solid fa-stopwatch"></i> Durasi: 2 Detik
+            </span>
+          </div>
+
+          <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">💡 Tips Rahasia:</h4>
+              <p class="text-sm text-slate-700 leading-relaxed">
+                1. Ambil angka di depan angka 5 (sebutlah <code class="text-indigo-600 font-bold font-mono">n</code>).<br>
+                2. Kalikan <code class="text-indigo-600 font-bold font-mono">n × (n + 1)</code>.<br>
+                3. Tinggal tempel angka <strong class="text-slate-900 font-mono">25</strong> di belakang hasilnya!
+              </p>
+            </div>
+            <div class="p-4 rounded-xl math-pill border border-indigo-200">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-indigo-800 mb-1">🎯 Contoh Soal CCM:</h4>
+              <p class="text-sm text-slate-800 font-semibold mb-1">Hitunglah nilai dari <span class="font-mono text-indigo-700 font-bold">65²</span>!</p>
+              <div class="text-xs font-mono text-slate-600 space-y-1">
+                <div>• Angka depan = 6. Kakak tingkatnya = 7.</div>
+                <div>• Kalikan: 6 × 7 = <strong>42</strong></div>
+                <div>• Tempel 25 👉 <span class="bg-indigo-600 text-white px-2 py-0.5 rounded font-bold">4225</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TRIK 2 -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 transition hover:border-indigo-300">
+          <div class="flex items-start justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-violet-600 text-white font-bold flex items-center justify-center text-sm shadow">
+                #2
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-slate-900">Perkalian Kilat Angka 11 ("Metode Renggangkan")</h3>
+                <span class="inline-block bg-violet-100 text-violet-800 text-xs px-2 py-0.5 rounded font-semibold">Trik Selip Tengah</span>
+              </div>
+            </div>
+            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full flex items-center gap-1">
+              <i class="fa-solid fa-stopwatch"></i> Durasi: 2 Detik
+            </span>
+          </div>
+
+          <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">💡 Tips Rahasia:</h4>
+              <p class="text-sm text-slate-700 leading-relaxed">
+                Untuk <code class="font-mono font-bold text-violet-600">AB × 11</code>:<br>
+                1. Pisahkan digit A dan B (beri celah di tengah).<br>
+                2. Isi celah tengah dengan hasil <code class="font-mono font-bold text-violet-600">(A + B)</code>.<br>
+                3. Jika hasilnya ≥ 10, simpan 1 ke angka depan!
+              </p>
+            </div>
+            <div class="p-4 rounded-xl math-pill border border-violet-200">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-violet-800 mb-1">🎯 Contoh Soal CCM:</h4>
+              <p class="text-sm text-slate-800 font-semibold mb-1">Hitunglah <span class="font-mono text-violet-700 font-bold">58 × 11</span>!</p>
+              <div class="text-xs font-mono text-slate-600 space-y-1">
+                <div>• Renggangkan 5 dan 8: <span class="text-slate-400">5 [ ? ] 8</span></div>
+                <div>• Tengah = 5 + 8 = 13 (tulis 3, simpan 1 ke angka 5)</div>
+                <div>• (5 + 1) = 6 👉 <span class="bg-violet-600 text-white px-2 py-0.5 rounded font-bold">638</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TRIK 3 -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 transition hover:border-indigo-300">
+          <div class="flex items-start justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-amber-500 text-white font-bold flex items-center justify-center text-sm shadow">
+                #3
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-slate-900">Selisih Kuadrat A² − B² (Trik Favorit Juri CCM)</h3>
+                <span class="inline-block bg-amber-100 text-amber-900 text-xs px-2 py-0.5 rounded font-semibold">Identitas Aljabar: a² − b² = (a+b)(a−b)</span>
+              </div>
+            </div>
+            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full flex items-center gap-1">
+              <i class="fa-solid fa-stopwatch"></i> Durasi: 3 Detik
+            </span>
+          </div>
+
+          <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">💡 Tips Rahasia:</h4>
+              <p class="text-sm text-slate-700 leading-relaxed">
+                JANGAN PERNAH menghitung kuadratnya satu-satu lalu dikurangkan! Ubah selalu jadi <strong>(Jumlahkan) × (Kurangkan)</strong>. Sangat dahsyat jika kedua angka berurutan karena (a − b) = 1!
+              </p>
+            </div>
+            <div class="p-4 rounded-xl math-pill border border-amber-200">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-amber-800 mb-1">🎯 Contoh Soal CCM:</h4>
+              <p class="text-sm text-slate-800 font-semibold mb-1">Berapakah hasil dari <span class="font-mono text-amber-700 font-bold">52² − 48²</span>?</p>
+              <div class="text-xs font-mono text-slate-600 space-y-1">
+                <div>• (52 + 48) × (52 − 48)</div>
+                <div>• = 100 × 4</div>
+                <div>• Hasil kilat 👉 <span class="bg-amber-500 text-white px-2 py-0.5 rounded font-bold">400</span> (Anak lain masih nyari 52²!)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TRIK 4 -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 transition hover:border-indigo-300">
+          <div class="flex items-start justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-emerald-600 text-white font-bold flex items-center justify-center text-sm shadow">
+                #4
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-slate-900">Deret Bilangan Asli Berurutan (Rumus Gauss)</h3>
+                <span class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-0.5 rounded font-semibold">Rumus: Sn = ½ × n × (n + 1)</span>
+              </div>
+            </div>
+            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full flex items-center gap-1">
+              <i class="fa-solid fa-stopwatch"></i> Durasi: 4 Detik
+            </span>
+          </div>
+
+          <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">💡 Tips Rahasia:</h4>
+              <p class="text-sm text-slate-700 leading-relaxed">
+                Penjumlahan 1 + 2 + 3 + ... + n.<br>
+                Trik: <strong>Bagi dua angka terakhirnya</strong> (atau pasangannya), lalu kalikan dengan angka setelahnya. Pasangan ujung-ke-ujung nilainya selalu sama!
+              </p>
+            </div>
+            <div class="p-4 rounded-xl math-pill border border-emerald-200">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-emerald-800 mb-1">🎯 Contoh Soal CCM:</h4>
+              <p class="text-sm text-slate-800 font-semibold mb-1">Hitunglah: <span class="font-mono text-emerald-700 font-bold">1 + 2 + 3 + ... + 40</span>!</p>
+              <div class="text-xs font-mono text-slate-600 space-y-1">
+                <div>• n = 40. Separuh dari 40 adalah 20.</div>
+                <div>• Kalikan dengan (40 + 1) = 41.</div>
+                <div>• 20 × 41 = 2 × 41 lalu beri nol 👉 <span class="bg-emerald-600 text-white px-2 py-0.5 rounded font-bold">820</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TRIK 5 -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 transition hover:border-indigo-300">
+          <div class="flex items-start justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-rose-600 text-white font-bold flex items-center justify-center text-sm shadow">
+                #5
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-slate-900">Perkalian Dua Angka Mendekati 100 (Trik Defisit)</h3>
+                <span class="inline-block bg-rose-100 text-rose-800 text-xs px-2 py-0.5 rounded font-semibold">Trik Vedic Math Cepat</span>
+              </div>
+            </div>
+            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full flex items-center gap-1">
+              <i class="fa-solid fa-stopwatch"></i> Durasi: 4 Detik
+            </span>
+          </div>
+
+          <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">💡 Tips Rahasia:</h4>
+              <p class="text-sm text-slate-700 leading-relaxed">
+                Misal 96 × 93.<br>
+                1. Cari jarak ke 100: 96 kurangi 4 (<span class="font-bold text-rose-600">-4</span>), 93 kurangi 7 (<span class="font-bold text-rose-600">-7</span>).<br>
+                2. Angka depan: Kurangi silang <code class="font-mono">96 − 7 = 89</code>.<br>
+                3. Angka belakang: Kalikan kedua jarak <code class="font-mono">(-4) × (-7) = 28</code>. Gabung!
+              </p>
+            </div>
+            <div class="p-4 rounded-xl math-pill border border-rose-200">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-rose-800 mb-1">🎯 Contoh Soal CCM:</h4>
+              <p class="text-sm text-slate-800 font-semibold mb-1">Hitunglah nilai perkalian: <span class="font-mono text-rose-700 font-bold">94 × 97</span>!</p>
+              <div class="text-xs font-mono text-slate-600 space-y-1">
+                <div>• Defisit dari 100: -6 dan -3</div>
+                <div>• Depan: 94 − 3 = <strong>91</strong></div>
+                <div>• Belakang: 6 × 3 = <strong>18</strong> 👉 <span class="bg-rose-600 text-white px-2 py-0.5 rounded font-bold">9118</span>!</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA TO CHALLENGE -->
+      <div class="text-center bg-gradient-to-br from-indigo-50 to-violet-50 border border-indigo-200 rounded-3xl p-8">
+        <h3 class="text-2xl font-black text-slate-900">Siap Uji Ketangkasan Siswa CNE?</h3>
+        <p class="text-sm text-slate-600 max-w-xl mx-auto mt-2">
+          Ada 10 soal serupa (2 soal untuk tiap trik) yang siap menguji ketangkasan berpikir cepat siswa di proyektor kelas!
+        </p>
+        <button onclick="switchTab('challenge')" class="mt-5 inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-7 py-3 rounded-2xl shadow-lg shadow-indigo-600/30 transition transform hover:-translate-y-0.5">
+          <i class="fa-solid fa-gamepad text-amber-300"></i> Mulai 10 Challenge CCM Sekarang
+        </button>
+      </div>
+    </section>
+
+    <!-- VIEW: 10 CHALLENGE SOAL SERUPA -->
+    <section id="section-challenge" class="hidden space-y-6">
+      <!-- CHALLENGE HEADER / STATS -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-full">Arena Cerdas Cermat</span>
+          <h2 class="text-xl font-black text-slate-900 mt-1">Simulasi 10 Soal Rebutan CCM (2 Soal Tiap Sub-Bab)</h2>
+          <p class="text-xs text-slate-500">Terapkan 5 trik yang sudah dipelajari tadi untuk menyelesaikan dalam waktu tercepat!</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="text-center px-4 py-2 bg-slate-50 rounded-xl border border-slate-200">
+            <span class="text-xs text-slate-400 block font-semibold">SKOR</span>
+            <span id="score-display" class="font-mono text-xl font-black text-indigo-600">0 / 10</span>
+          </div>
+          <button onclick="resetChallenge()" class="text-xs font-bold text-slate-600 hover:text-indigo-600 bg-slate-100 hover:bg-slate-200 px-3 py-2 rounded-xl transition">
+            <i class="fa-solid fa-arrow-rotate-left mr-1"></i> Ulang
+          </button>
+        </div>
+      </div>
+
+      <!-- CHALLENGE CARDS CONTAINER -->
+      <div id="quiz-container" class="space-y-6">
+        <!-- Soal Cards injected by JS -->
+      </div>
+
+      <!-- FINAL SCORE MODAL / SUMMARY -->
+      <div id="quiz-summary" class="hidden bg-white rounded-3xl p-8 border border-slate-200 shadow-xl text-center max-w-xl mx-auto space-y-4">
+        <div id="summary-icon" class="text-5xl text-amber-500 animate-bounce">🏆</div>
+        <h3 id="summary-title" class="text-2xl font-black text-slate-900">Hasil Evaluasi CNE</h3>
+        <p id="summary-desc" class="text-sm text-slate-600">Hebat! Kamu telah menyelesaikan 10 challenge trik cepat matematika.</p>
+        <div class="p-4 bg-indigo-50 rounded-2xl border border-indigo-100">
+          <span class="text-xs text-indigo-600 font-bold block uppercase tracking-wider">Skor Akhir Kamu (Skala 100)</span>
+          <span id="summary-score" class="text-4xl font-black text-indigo-700 font-mono">100</span>
+        </div>
+        <div class="flex justify-center gap-3 pt-2">
+          <button onclick="resetChallenge()" class="bg-indigo-600 text-white font-bold px-6 py-2.5 rounded-xl hover:bg-indigo-700 transition text-sm">
+            Coba Lagi
+          </button>
+          <button onclick="switchTab('materi')" class="bg-slate-100 text-slate-700 font-bold px-6 py-2.5 rounded-xl hover:bg-slate-200 transition text-sm">
+            Pelajari Ulang Trik
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="mt-auto border-t border-slate-200 bg-white py-6">
+    <div class="max-w-6xl mx-auto px-4 text-center text-xs text-slate-400">
+      CNE Math Kelas 7 • Materi Khusus Persiapan Tim Lomba Cerdas Cermat Matematika (CCM)
+    </div>
+  </footer>
+
+  <!-- SCRIPT LOGIC -->
+  <script>
+    // Tab Switching
+    function switchTab(tab) {
+      const secMateri = document.getElementById('section-materi');
+      const secChallenge = document.getElementById('section-challenge');
+      const btnMateri = document.getElementById('btn-nav-materi');
+      const btnChallenge = document.getElementById('btn-nav-challenge');
+
+      if (tab === 'materi') {
+        secMateri.classList.remove('hidden');
+        secChallenge.classList.add('hidden');
+        btnMateri.className = "px-4 py-2 rounded-lg text-sm font-semibold transition bg-indigo-50 text-indigo-700 border border-indigo-200";
+        btnChallenge.className = "px-4 py-2 rounded-lg text-sm font-semibold transition bg-slate-100 hover:bg-indigo-600 hover:text-white text-slate-600";
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        secMateri.classList.add('hidden');
+        secChallenge.classList.remove('hidden');
+        btnChallenge.className = "px-4 py-2 rounded-lg text-sm font-semibold transition bg-indigo-50 text-indigo-700 border border-indigo-200";
+        btnMateri.className = "px-4 py-2 rounded-lg text-sm font-semibold transition bg-slate-100 hover:bg-indigo-600 hover:text-white text-slate-600";
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    // LIVE SIMULATOR LOGIC
+    // 1. Akhiran 5
+    const sqInput = document.getElementById('sim-sq5-input');
+    const sqRes = document.getElementById('sim-sq5-result');
+    const sqExp = document.getElementById('sim-sq5-explain');
+
+    function updateSq5() {
+      let val = parseInt(sqInput.value) || 0;
+      if (val % 10 !== 5) {
+        val = Math.floor(val / 10) * 10 + 5;
+        sqInput.value = val;
+      }
+      const n = Math.floor(val / 10);
+      const res = val * val;
+      sqRes.textContent = res;
+      sqExp.innerHTML = `Langkah: (${n} × ${n+1}) = <strong>${n * (n+1)}</strong>, tempel "25" 👉 <strong>${res}</strong>!`;
+    }
+    sqInput.addEventListener('input', updateSq5);
+
+    // 2. Perkalian 11
+    const mult11Input = document.getElementById('sim-11-input');
+    const mult11Res = document.getElementById('sim-11-result');
+    const mult11Exp = document.getElementById('sim-11-explain');
+
+    function update11() {
+      let val = parseInt(mult11Input.value) || 10;
+      if (val < 10) val = 10;
+      if (val > 99) val = 99;
+      const tens = Math.floor(val / 10);
+      const units = val % 10;
+      const sum = tens + units;
+      const res = val * 11;
+      mult11Res.textContent = res;
+      if (sum < 10) {
+        mult11Exp.innerHTML = `Langkah: Renggangkan ${tens} & ${units}, tengah (${tens}+${units}=${sum}) 👉 <strong>${res}</strong>!`;
+      } else {
+        mult11Exp.innerHTML = `Langkah: Renggangkan ${tens} & ${units}, tengah (${tens}+${units}=${sum}). Simpan 1 ke ${tens} (${tens}+1=${tens+1}) 👉 <strong>${res}</strong>!`;
+      }
+    }
+    mult11Input.addEventListener('input', update11);
+
+    // QUIZ DATA: 10 SOAL (2 SOAL TIAP SUB BAB)
+    const questions = [
+      // SUB-BAB 1: Kuadrat Akhiran 5 (2 Soal)
+      {
+        id: 1,
+        trickTag: "Sub-Bab 1: Kuadrat Akhiran 5 (Soal A)",
+        question: "Berapakah hasil dari 85²?",
+        options: [
+          { text: "7225", correct: true },
+          { text: "7025", correct: false },
+          { text: "6425", correct: false },
+          { text: "8125", correct: false }
+        ],
+        tips: "Gunakan trik n × (n+1): Ambil 8, kalikan dengan 9 = 72. Tempel 25 di belakang!",
+        detail: "85² = (8 × 9) & 25 = 7225. Waktu hitung: 1.5 detik!"
+      },
+      {
+        id: 2,
+        trickTag: "Sub-Bab 1: Kuadrat Akhiran 5 (Soal B)",
+        question: "Berapakah hasil dari 115²? (Tingkat Lanjut)",
+        options: [
+          { text: "12125", correct: false },
+          { text: "13225", correct: true },
+          { text: "12225", correct: false },
+          { text: "13525", correct: false }
+        ],
+        tips: "Ambil angka depan yaitu 11. Kalikan 11 × 12 = 132. Tempel 25 di belakangnya!",
+        detail: "115² -> 11 × 12 = 132 -> tempel 25 -> 13225!"
+      },
+
+      // SUB-BAB 2: Perkalian 11 Renggangkan (2 Soal)
+      {
+        id: 3,
+        trickTag: "Sub-Bab 2: Renggangkan 11 (Soal A)",
+        question: "Berapakah hasil dari 45 × 11?",
+        options: [
+          { text: "485", correct: false },
+          { text: "495", correct: true },
+          { text: "505", correct: false },
+          { text: "445", correct: false }
+        ],
+        tips: "Renggangkan 4 dan 5. Sisipkan jumlahnya (4 + 5 = 9) di tengah-tengah.",
+        detail: "4 [4+5=9] 5 -> langsung dapat 495 tanpa cekeran!"
+      },
+      {
+        id: 4,
+        trickTag: "Sub-Bab 2: Renggangkan 11 (Soal B)",
+        question: "Berapakah hasil dari 78 × 11? (Kasus Simpan Angka)",
+        options: [
+          { text: "758", correct: false },
+          { text: "848", correct: false },
+          { text: "858", correct: true },
+          { text: "868", correct: false }
+        ],
+        tips: "Renggangkan 7 dan 8. Tengahnya 7 + 8 = 15. Tulis 5 di tengah, tambahkan 1 ke angka depan (7 + 1 = 8).",
+        detail: "7 [15] 8 -> (7+1) 5 8 = 858."
+      },
+
+      // SUB-BAB 3: Selisih Kuadrat A² - B² (2 Soal)
+      {
+        id: 5,
+        trickTag: "Sub-Bab 3: Selisih Kuadrat (Soal A)",
+        question: "Tentukan nilai dari 73² − 27²!",
+        options: [
+          { text: "2116", correct: false },
+          { text: "4600", correct: true },
+          { text: "5000", correct: false },
+          { text: "4400", correct: false }
+        ],
+        tips: "Gunakan rumus a² − b² = (a + b)(a − b). Jumlahkan 73+27=100, kurangkan 73−27=46. Lalu kalikan!",
+        detail: "(73 + 27) × (73 − 27) = 100 × 46 = 4600. Sangat cepat tanpa perlu menguadratkan!"
+      },
+      {
+        id: 6,
+        trickTag: "Sub-Bab 3: Selisih Kuadrat (Soal B)",
+        question: "Berapakah hasil dari 101² − 99²?",
+        options: [
+          { text: "400", correct: true },
+          { text: "200", correct: false },
+          { text: "300", correct: false },
+          { text: "800", correct: false }
+        ],
+        tips: "Bentuk: (101 + 99) × (101 − 99) = 200 × 2 = 400!",
+        detail: "(101 + 99) = 200, selisihnya (101 - 99) = 2. Hasil: 200 × 2 = 400."
+      },
+
+      // SUB-BAB 4: Deret Bilangan Asli Gauss (2 Soal)
+      {
+        id: 7,
+        trickTag: "Sub-Bab 4: Deret Gauss (Soal A)",
+        question: "Hitunglah hasil penjumlahan berurutan: 1 + 2 + 3 + ... + 50!",
+        options: [
+          { text: "1225", correct: false },
+          { text: "1275", correct: true },
+          { text: "1300", correct: false },
+          { text: "2550", correct: false }
+        ],
+        tips: "Rumus Gauss: ½ × n × (n + 1). Separuh dari 50 adalah 25. Kalikan 25 × 51 = 1275.",
+        detail: "Sn = 25 × 51 = 1275."
+      },
+      {
+        id: 8,
+        trickTag: "Sub-Bab 4: Deret Gauss (Soal B)",
+        question: "Hitunglah hasil penjumlahan: 1 + 2 + 3 + ... + 100!",
+        options: [
+          { text: "5000", correct: false },
+          { text: "5050", correct: true },
+          { text: "5100", correct: false },
+          { text: "10100", correct: false }
+        ],
+        tips: "Soal klasik CCM! Separuh 100 adalah 50. Kalikan 50 × 101 = 5050.",
+        detail: "50 × 101 = 5050. Angka kembar legendaris temuan Carl Friedrich Gauss!"
+      },
+
+      // SUB-BAB 5: Perkalian Dekat 100 Vedic (2 Soal)
+      {
+        id: 9,
+        trickTag: "Sub-Bab 5: Perkalian Dekat 100 (Soal A)",
+        question: "Berapakah hasil perkalian kilat: 96 × 92?",
+        options: [
+          { text: "8832", correct: true },
+          { text: "8732", correct: false },
+          { text: "8912", correct: false },
+          { text: "8842", correct: false }
+        ],
+        tips: "Defisit dari 100 adalah -4 dan -8. Bagian depan: 96 − 8 = 88. Bagian belakang: (-4) × (-8) = 32.",
+        detail: "Depan: 96 - 8 = 88. Belakang: 4 × 8 = 32. Gabungkan -> 8832!"
+      },
+      {
+        id: 10,
+        trickTag: "Sub-Bab 5: Perkalian Dekat 100 (Soal B)",
+        question: "Berapakah hasil dari 98 × 97?",
+        options: [
+          { text: "9506", correct: true },
+          { text: "9560", correct: false },
+          { text: "9406", correct: false },
+          { text: "9606", correct: false }
+        ],
+        tips: "Defisit: 98 kurang 2 (-2), 97 kurang 3 (-3). Depan: 98 − 3 = 95. Belakang: 2 × 3 = 06 (harus 2 digit!).",
+        detail: "Depan = 95. Belakang = 2 × 3 = 06. Hasil = 9506. Hati-hati jangan lupa angka nol (06)!"
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById('quiz-container');
+      container.innerHTML = '';
+
+      questions.forEach((q, idx) => {
+        const card = document.createElement('div');
+        card.className = "bg-white rounded-2xl border border-slate-200 p-6 shadow-sm";
+        card.id = `q-card-${q.id}`;
+
+        let optionsHtml = '';
+        q.options.forEach((opt, optIdx) => {
+          optionsHtml += `
+            <button onclick="selectAnswer(${q.id}, ${optIdx})" id="opt-btn-${q.id}-${optIdx}" class="w-full text-left p-3.5 rounded-xl border border-slate-200 hover:border-indigo-400 hover:bg-indigo-50/50 transition font-mono font-medium text-sm flex items-center justify-between group">
+              <span class="flex items-center gap-3">
+                <span class="w-7 h-7 rounded-lg bg-slate-100 group-hover:bg-indigo-100 text-slate-700 group-hover:text-indigo-700 flex items-center justify-center text-xs font-bold transition">
+                  ${String.fromCharCode(65 + optIdx)}
+                </span>
+                <span>${opt.text}</span>
+              </span>
+              <span class="status-icon text-slate-300"></span>
+            </button>
+          `;
+        });
+
+        card.innerHTML = `
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2.5 py-1 rounded-full">${q.trickTag}</span>
+            <span class="text-xs font-bold text-slate-400">Soal #${idx + 1} dari 10</span>
+          </div>
+          <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-4">${q.question}</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+            ${optionsHtml}
+          </div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs font-sans mt-3 border"></div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function selectAnswer(qid, optIndex) {
+      if (userAnswers[qid] !== undefined) return; // Prevent changing after answered
+      userAnswers[qid] = optIndex;
+
+      const q = questions.find(item => item.id === qid);
+      const isCorrect = q.options[optIndex].correct;
+      const expBox = document.getElementById(`explanation-${qid}`);
+
+      // Update Button Styles
+      q.options.forEach((opt, idx) => {
+        const btn = document.getElementById(`opt-btn-${qid}-${idx}`);
+        btn.disabled = true;
+        if (opt.correct) {
+          btn.classList.remove('border-slate-200', 'hover:bg-indigo-50/50');
+          btn.classList.add('border-emerald-500', 'bg-emerald-50', 'text-emerald-900', 'font-bold');
+          btn.querySelector('.status-icon').innerHTML = '<i class="fa-solid fa-circle-check text-emerald-600 text-base"></i>';
+        } else if (idx === optIndex && !isCorrect) {
+          btn.classList.remove('border-slate-200');
+          btn.classList.add('border-rose-500', 'bg-rose-50', 'text-rose-900', 'font-bold');
+          btn.querySelector('.status-icon').innerHTML = '<i class="fa-solid fa-circle-xmark text-rose-500 text-base"></i>';
+        } else {
+          btn.classList.add('opacity-40');
+        }
+      });
+
+      // Show explanation
+      expBox.classList.remove('hidden');
+      if (isCorrect) {
+        expBox.className = "p-4 rounded-xl text-xs font-sans mt-3 border border-emerald-200 bg-emerald-50 text-emerald-900";
+        expBox.innerHTML = `
+          <div class="flex items-center gap-2 font-bold mb-1 text-emerald-800">
+            <i class="fa-solid fa-bolt"></i> TEPAT & KILAT! (+10 Poin)
+          </div>
+          <p class="text-slate-700">${q.tips}</p>
+          <div class="mt-1 font-mono font-semibold text-slate-800">${q.detail}</div>
+        `;
+      } else {
+        expBox.className = "p-4 rounded-xl text-xs font-sans mt-3 border border-rose-200 bg-rose-50 text-rose-900";
+        expBox.innerHTML = `
+          <div class="flex items-center gap-2 font-bold mb-1 text-rose-800">
+            <i class="fa-solid fa-triangle-exclamation"></i> Kurang Tepat!
+          </div>
+          <p class="text-slate-700">${q.tips}</p>
+          <div class="mt-1 font-mono font-semibold text-slate-800">${q.detail}</div>
+        `;
+      }
+
+      updateScore();
+    }
+
+    function updateScore() {
+      let correctCount = 0;
+      let totalAnswered = Object.keys(userAnswers).length;
+
+      questions.forEach(q => {
+        const ans = userAnswers[q.id];
+        if (ans !== undefined && q.options[ans].correct) {
+          correctCount++;
+        }
+      });
+
+      document.getElementById('score-display').textContent = `${correctCount} / 10`;
+
+      if (totalAnswered === 10) {
+        showFinalSummary(correctCount);
+      }
+    }
+
+    function showFinalSummary(correctCount) {
+      const summary = document.getElementById('quiz-summary');
+      const score = correctCount * 10;
+      document.getElementById('summary-score').textContent = score;
+
+      const title = document.getElementById('summary-title');
+      const desc = document.getElementById('summary-desc');
+      const icon = document.getElementById('summary-icon');
+
+      if (score === 100) {
+        icon.textContent = "🥇";
+        title.textContent = "Superstar Cerdas Cermat!";
+        desc.textContent = "Sempurna! Kamu menuntaskan seluruh 10 soal dari 5 trik cepat dengan akurasi 100%. Siap jadi andalan tim CCM!";
+      } else if (score >= 70) {
+        icon.textContent = "🥈";
+        title.textContent = "Hebat & Berpotensi Tinggi!";
+        desc.textContent = "Pola berpikir cepatmu sudah jalan. Tinggal perbanyak latihan agar reflek mental math semakin spontan!";
+      } else {
+        icon.textContent = "💡";
+        title.textContent = "Terus Berlatih!";
+        desc.textContent = "Jangan khawatir, trik-trik ini butuh pembiasaan. Buka kembali tab materi dan coba pahami polanya lagi.";
+      }
+
+      summary.classList.remove('hidden');
+      summary.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function resetChallenge() {
+      userAnswers = {};
+      document.getElementById('score-display').textContent = "0 / 10";
+      document.getElementById('quiz-summary').classList.add('hidden');
+      renderQuiz();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // INIT
+    window.onload = function() {
+      renderQuiz();
+      updateSq5();
+      update11();
+    };
+  </script>
+</body>
+</html>
